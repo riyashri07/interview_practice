@@ -1,43 +1,43 @@
 var arr = [5, 4, 2, 3, 1, 7];
 var n = arr.length;
 
-// 1. Normal Comsecutive in array
+// 1. Normal Comsecutive in array----------------------------------------------------------
 
 function normal(arr, n) {
-  arr.sort();
-  for (var i = 1; i < n; i++)
-    if (arr[i] != arr[i - 1] + 1) {
-      return false;
-    }
-  return true;
+    arr.sort();
+    for (var i = 1; i < n; i++)
+        if (arr[i] != arr[i - 1] + 1) {
+            return false;
+        }
+    return true;
 }
 
 let y = normal(arr);
 console.log(y);
 
-// 2. Three Consecutive number in array also Even
+// 2. Three Consecutive number in array also Even -------------------------------------------------
 
 var a = [8, 4, 1, 2, 6];
 a.sort();
 
 function three(a) {
-  let count=0;
-  for (let i = 0; i < a.length - 1; i++) {
-    if (a[i] % 2 == 0 && a[i + 1] % 2 == 0 && a[i + 2] % 2 == 0) {
-      count++;
+    let count = 0;
+    for (let i = 0; i < a.length - 1; i++) {
+        if (a[i] % 2 == 0 && a[i + 1] % 2 == 0 && a[i + 2] % 2 == 0) {
+            count++;
+        }
     }
-  }
-  return count;
+    return count;
 }
 
 let x = three(a);
-if (x>=1) {
-  console.log(true);
+if (x >= 1) {
+    console.log(true);
 } else {
-  console.log(false);
+    console.log(false);
 }
 
-// 3. All '0' in the array at the End.
+// 3. All '0' in the array at the End. ----------------------------------------------------------
 
 let A = [5, 6, 0, 4, 6, 0, 9, 0, 8];
 let n = A.length;
@@ -52,3 +52,47 @@ for (let i = 0; i < n; i++) {
     }
 }
 console.log(A);
+
+// Spiral Traversal in 2D Array ----------------------------------------------------------
+
+let arr = [
+    ["A", "B", "C", "D"], //0
+    ["E", "F", "G", "H"], //1
+    ["I", "J", "K", "L"], //2
+    ["M", "N", "O", "P"], //3
+];
+
+let result = [];
+
+let top = 0;
+let bottom = arr.length - 1;
+let left = 0;
+let right = arr[0].length - 1;
+
+while (left <= right && top <= bottom) {
+
+    for (let i = left; i <= right; i++) {
+        result.push(arr[top][i]); // A B C D (F G)
+        // console.log(arr[top][i]);
+    }
+    top++; //0 + 1 = 1
+    for (let i = top; i <= bottom; i++) {
+        result.push(arr[i][right]); // H L P (K)
+        // console.log(arr[i][right]);
+    }
+    right--;
+
+    for (let i = right; i >= left; i--) {
+        result.push(arr[bottom][i]); // O N M (J)
+        // console.log(arr[bottom][i]);
+    }
+    bottom--;
+
+    for (let i = bottom; i >= top; i--) {
+        result.push(arr[i][left]); // I E
+        // console.log(arr[i][left]);
+    }
+    left++;
+}
+
+console.log(result);
