@@ -56,6 +56,3 @@ function isHappyNumber(n) {
 }
 
 console.log(isHappyNumber(2)); // false
-console.log(isHappyNumber(19)); // true
-console.log(isHappyNumber(2)); // false
-
