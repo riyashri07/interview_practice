@@ -1,5 +1,6 @@
 
 import './App.css';
+import Settimeout from './component/Settimeout';
 import Bgccolor_change from './component/bgccolor_change';
 import Counter from './component/counter';
 import Mapdata from './component/mapdata';
@@ -11,7 +12,8 @@ function App() {
       <Mapdata />
       <Bgccolor_change />
       <br />
-      <Todo/>
+      <Todo />
+      <Settimeout/>
     </div>
   );
 }
