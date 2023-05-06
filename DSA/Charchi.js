@@ -31,3 +31,31 @@ for (let i = 0; i < n; i++) {
     }
     console.log(bag);
 }
+
+
+// A happy number
+
+function isHappyNumber(n) {
+  let obj = {};
+
+  while (n !== 1) {
+    let sum = 0;
+    while (n > 0) {
+      let digit = n % 10;
+      sum += digit * digit;
+      n = Math.floor(n / 10);
+    }
+    if (obj[sum]) {
+      return false;
+    }
+    obj[sum] = true;
+    n = sum;
+  }
+
+  return true;
+}
+
+console.log(isHappyNumber(2)); // false
+console.log(isHappyNumber(19)); // true
+console.log(isHappyNumber(2)); // false
+
