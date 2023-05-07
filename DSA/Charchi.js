@@ -13,49 +13,173 @@
 
 // 2. A matrix Transpose in D array
 
-let arr = [
-    [0, 0, 0, 0],
-    [1, 1, 1, 1],
-    [2, 2, 2, 2],
-    [3, 3, 3, 3],
-    // [4, 4, 4, 4],
-];
+// let arr = [
+//     [0, 0, 0, 0],
+//     [1, 1, 1, 1],
+//     [2, 2, 2, 2],
+//     [3, 3, 3, 3],
+//     // [4, 4, 4, 4],
+// ];
 
-let n = arr.length - 1;
-let m = arr[0].length;
+// let n = arr.length - 1;
+// let m = arr[0].length;
 
-for (let i = 0; i < n; i++) {
-    let bag = "";
-    for (let j = 0; j <= m; j++) {
-        bag = bag + arr[j][i] + " ";
-    }
-    console.log(bag);
-}
-
+// for (let i = 0; i < n; i++) {
+//     let bag = "";
+//     for (let j = 0; j <= m; j++) {
+//         bag = bag + arr[j][i] + " ";
+//     }
+//     console.log(bag);
+// }
 
 // A happy number
 
-function isHappyNumber(n) {
-  let obj = {};
+// function isHappyNumber(n) {
+//   let obj = {};
 
-  while (n !== 1) {
-    let sum = 0;
-    while (n > 0) {
-      let digit = n % 10;
-      sum += digit * digit;
-      n = Math.floor(n / 10);
-    }
-    if (obj[sum]) {
-      return false;
-    }
-    obj[sum] = true;
-    n = sum;
-  }
+//   while (n !== 1) {
+//     let sum = 0;
+//     while (n > 0) {
+//       let digit = n % 10;
+//       sum += digit * digit;
+//       n = Math.floor(n / 10);
+//     }
+//     if (obj[sum]) {
+//       return false;
+//     }
+//     obj[sum] = true;
+//     n = sum;
+//   }
 
-  return true;
+//   return true;
+// }
+
+// console.log(isHappyNumber(19));
+
+
+// A Transform in education
+
+// let str = "A Transformation in education";
+
+// let str1 = str.split(" ");
+// console.log(str1)
+// let bag = " ";
+// for (let i = str1.length - 1; i >= 0; i--) {
+//   bag = bag + str1[i] + " ";
+// }
+// console.log(bag);
+
+//Merge two arrays
+
+// let a = [3, 5, 10];
+// let b = [7, 9, 11 , 4];
+// let n = a.length;
+// let m  = b.length
+// let arr = [];
+// for (let i = 0; i < n; i++) {
+//   arr.push(a[i]);
+// }
+
+// for (let i = 0; i < m; i++) {
+//   arr.push(b[i]);
+// }
+
+// arr.sort(function (a, b) {
+//   return a - b;
+// });
+// console.log(arr.join(","))
+
+
+//convert 0 to 1 in binary 2D Array
+
+// let matrix = [
+//   [0, 0, 0, 1],
+//   [1, 1, 1, 1],
+//   [0, 0, 0, 0],
+//   [1, 0, 1, 0]
+// ]
+// let outer = [];
+// for (let i = 0; i < matrix.length; i++){
+//   let inner = [];
+//   for (let j = 0; j < matrix[i].length; j++){
+//     if (matrix[i][j] == 0) {
+//       inner.push(1);
+//     } else {
+//       inner.push(0);
+//     }
+//   }
+//   outer.push(inner);
+// }
+// console.log(outer);
+
+
+
+//Rahul gauravs questions
+
+// function runProgram(input) {
+//   input = input.trim().split("\n");
+//   let n = +input[0];
+//   let arr = [];
+//   for (let i = 1; i < input.length; i++) {
+//     let x = input[i].trim().split(" ");
+//     let z = x[0];
+//     let y = +x[1];
+//     arr.push(z, y);
+//   }
+//  rahul(arr);
+// }
+
+// let arr = ["ankit", 10, "amit", 40, "shivam", 25, "shubham", 33];
+
+// function rahul(arr) {
+//   let max = -Infinity;
+//   let name;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (i % 2 !== 0) {
+//       if (arr[i] > max) {
+//         max = arr[i];
+//         name=arr[i-1]
+//       }
+//     }
+//   }
+//   console.log(name);
+// }
+// rahul(arr);
+
+
+
+
+
+
+
+
+
+//roman numbers
+
+let N = 2085;
+let obj = {
+  I: 1,
+  IV: 4,
+  V: 5,
+  IX: 9,
+  X: 10,
+  XL: 40,
+  L: 50,
+  XC: 90,
+  C: 100,
+  CD: 400,
+  D: 500,
+  CM: 900,
+  M:1000,
 }
-
-console.log(isHappyNumber(2)); // false
-console.log(isHappyNumber(19)); // true
-console.log(isHappyNumber(2)); // false
-
+let bag = "";
+const keys = Object.keys(obj).sort((a, b) => obj[b] - obj[a]);
+console.log(keys)
+// sort the keys in descending order
+for (let key of keys) {
+    while (N >= obj[key]) {
+        bag += key;
+        N -= obj[key];
+    }
+}
+console.log(bag);
