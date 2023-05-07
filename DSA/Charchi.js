@@ -13,49 +13,48 @@
 
 // 2. A matrix Transpose in D array
 
-let arr = [
-    [0, 0, 0, 0],
-    [1, 1, 1, 1],
-    [2, 2, 2, 2],
-    [3, 3, 3, 3],
+// let arr = [
+//     [0, 0, 0, 0],
+//     [1, 1, 1, 1],
+//     [2, 2, 2, 2],
+//     [3, 3, 3, 3],
 //     // [4, 4, 4, 4],
-];
+// ];
 
-let n = arr.length - 1;
-let m = arr[0].length;
+// let n = arr.length - 1;
+// let m = arr[0].length;
 
-for (let i = 0; i < n; i++) {
-    let bag = "";
-    for (let j = 0; j <= m; j++) {
-        bag = bag + arr[j][i] + " ";
-    }
-    console.log(bag);
-}
+// for (let i = 0; i < n; i++) {
+//     let bag = "";
+//     for (let j = 0; j <= m; j++) {
+//         bag = bag + arr[j][i] + " ";
+//     }
+//     console.log(bag);
+// }
 
 // A happy number
 
-function isHappyNumber(n) {
-  let obj = {};
+// function isHappyNumber(n) {
+//   let obj = {};
 
-  while (n !== 1) {
-    let sum = 0;
-    while (n > 0) {
-      let digit = n % 10;
-      sum += digit * digit;
-      n = Math.floor(n / 10);
-    }
-    if (obj[sum]) {
-      return false;
-    }
-    obj[sum] = true;
-    n = sum;
-  }
+//   while (n !== 1) {
+//     let sum = 0;
+//     while (n > 0) {
+//       let digit = n % 10;
+//       sum += digit * digit;
+//       n = Math.floor(n / 10);
+//     }
+//     if (obj[sum]) {
+//       return false;
+//     }
+//     obj[sum] = true;
+//     n = sum;
+//   }
 
-  return true;
-}
+//   return true;
+// }
 
 // console.log(isHappyNumber(19));
-
 
 // A Transform in education
 
@@ -89,7 +88,6 @@ function isHappyNumber(n) {
 // });
 // console.log(arr.join(","))
 
-
 //convert 0 to 1 in binary 2D Array
 
 // let matrix = [
@@ -111,8 +109,6 @@ function isHappyNumber(n) {
 //   outer.push(inner);
 // }
 // console.log(outer);
-
-
 
 //Rahul gauravs questions
 
@@ -146,44 +142,43 @@ function isHappyNumber(n) {
 // }
 // rahul(arr);
 
-
-
-
-
-
-
-
-
 //roman numbers
 
-let N = 2085;
-let obj = {
-  I: 1,
-  IV: 4,
-  V: 5,
-  IX: 9,
-  X: 10,
-  XL: 40,
-  L: 50,
-  XC: 90,
-  C: 100,
-  CD: 400,
-  D: 500,
-  CM: 900,
-  M:1000,
-}
-let bag = "";
-const keys = Object.keys(obj).sort((a, b) => obj[b] - obj[a]);
-console.log(keys)
-// sort the keys in descending order
-for (let key of keys) {
-    while (N >= obj[key]) {
-        bag += key;
-        N -= obj[key];
-    }
-}
+// let N = 2085;
+// let obj = {
+//   I: 1,
+//   IV: 4,
+//   V: 5,
+//   IX: 9,
+//   X: 10,
+//   XL: 40,
+//   L: 50,
+//   XC: 90,
+//   C: 100,
+//   CD: 400,
+//   D: 500,
+//   CM: 900,
+//   M:1000,
+// }
+// let bag = "";
+// const keys = Object.keys(obj).sort((a, b) => obj[b] - obj[a]); // sort the keys in descending order
+// for (let key of keys) {
+//     while (N >= obj[key]) {
+//         bag += key;
+//         N -= obj[key];
+//     }
+// }
 
-console.log(isHappyNumber(2)); // false
-console.log(isHappyNumber(19)); // true
-console.log(isHappyNumber(2)); // false
+// console.log(isHappyNumber(19)); // true
 
+// Factorial of given number
+
+// let N = 50;
+
+// let x = 0;
+// for (let i = N; i >= 0; i--) {
+//     x = x + N * (N - 1);
+// }
+// console.log(x);
+
+// 
