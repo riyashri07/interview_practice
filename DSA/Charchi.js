@@ -181,4 +181,37 @@
 // }
 // console.log(x);
 
-// 
+// merging two array and sorting them with two pointer
+
+const arr1 = [1, 3, 4, 6];
+const arr2 = [2, 5, 7, 8];
+
+const mergeSortedArrays = (arr1, arr2) => {
+    let i = 0;
+    let j = 0;
+    const arr = []; 
+
+    while (i < arr1.length && j < arr2.length) {
+        if (arr1[i] <= arr2[j]) {
+            arr.push(arr1[i]);
+            i++;
+        } else {
+            arr.push(arr2[j]);
+            j++;
+        }
+    }
+
+        while (i < arr1.length) {
+        arr.push(arr1[i]);
+        i++;
+      }
+
+      while (j < arr2.length) {
+        arr.push(arr2[j]);
+        j++;
+      }
+
+    return arr;
+};
+
+console.log(mergeSortedArrays(arr1, arr2));
