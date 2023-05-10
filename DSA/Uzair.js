@@ -18,7 +18,7 @@ console.log(y);
 // 2. Three Consecutive number in array also Even -------------------------------------------------
 
 var a = [8, 4, 1, 2, 6];
-a.sort();
+a.sort();//1 2 4 6 8
 
 function three(a) {
     let count = 0;
@@ -72,24 +72,24 @@ while (left <= right && top <= bottom) {
 
     for (let i = left; i <= right; i++) {
         result.push(arr[top][i]); // A B C D (F G)
-        // console.log(arr[top][i]);
+        
     }
     top++; //0 + 1 = 1
     for (let i = top; i <= bottom; i++) {
         result.push(arr[i][right]); // H L P (K)
-        // console.log(arr[i][right]);
+
     }
     right--;
 
     for (let i = right; i >= left; i--) {
         result.push(arr[bottom][i]); // O N M (J)
-        // console.log(arr[bottom][i]);
+
     }
     bottom--;
 
     for (let i = bottom; i >= top; i--) {
         result.push(arr[i][left]); // I E
-        // console.log(arr[i][left]);
+
     }
     left++;
 }
