@@ -194,7 +194,38 @@ for (let key of keys) {
 console.log(bag);
 
 
-// 10. Factorial of given number
+// 10. Roman (Accepted)
+
+let num = 2085;
+function find(num) {
+    let value = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+    let sym = [
+        "M",
+        "CM",
+        "D",
+        "CD",
+        "C",
+        "XC",
+        "L",
+        "XL",
+        "X",
+        "IX",
+        "V",
+        "IV",
+        "I",
+  ];
+
+  let bag = '';
+  for (let i = 0; i < value.length; i++){
+    while (value[i]<= num) {
+      bag = bag + sym[i];
+      num=num-value[i]
+    }
+  }
+    console.log(bag)
+
+
+// 11. Factorial of given number
 
 
 let N = 5;
@@ -203,9 +234,22 @@ let x = 0;
 for (let i = N; i >= 0; i--) {
     x = x + N * (N - 1);
 }
-console.log(x);
+    console.log(x);
 
-// 11. merging two array and sorting them with two pointer
+// 11. Factorial (Accepted)
+
+
+function find (n) {
+  let sum = 1;
+  for (let i = 1; i <= n; i++){
+    sum=sum*i
+  }
+  console.log(sum)
+}
+find(5)
+let n = 5;
+
+// 12. merging two array and sorting them with two pointer
 
 const arr1 = [1, 3, 4, 6];
 const arr2 = [2, 5, 7, 8];
@@ -242,7 +286,7 @@ console.log(mergeSortedArrays(arr1, arr2));
 
 
 
-// 12. subarray contigous 1 integer suhail ne diya h
+// 13. subarray contigous 1 integer suhail ne diya h
 
 
 
@@ -269,7 +313,7 @@ function maxProductSubarray(arr) {
 }
 
 
-// 13. suhail ne diya h merged two sorted array
+// 14. suhail ne diya h merged two sorted array
 
 
 // const arr1 = [1, 3, 4, 6];
@@ -318,7 +362,7 @@ function maxProductSubarray(arr) {
 // SortArray();
 
 
-// 14. Palindrome linked list
+// 15. Palindrome linked list
 
 
 const LinkedListNode = class {
@@ -326,8 +370,10 @@ const LinkedListNode = class {
         this.data = nodeData;
         this.next = null;
     }
-};
+    };
+
 // Complete the function below
+
 var isPalindrome = function (head) {
     let current = head;
     let obj = {};
@@ -351,4 +397,5 @@ var isPalindrome = function (head) {
     } else {
         return false;
     }
-};
+}
+
