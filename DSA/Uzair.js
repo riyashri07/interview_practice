@@ -52,7 +52,7 @@ for (let i = 0; i < n; i++) {
 }
 console.log(A);
 
-// Spiral Traversal in 2D Array ----------------------------------------------------------
+// 4. Spiral Traversal in 2D Array ----------------------------------------------------------
 
 let arr = [
     ["A", "B", "C", "D"], //0
@@ -72,7 +72,7 @@ while (left <= right && top <= bottom) {
 
     for (let i = left; i <= right; i++) {
         result.push(arr[top][i]); // A B C D (F G)
-        
+
     }
     top++; //0 + 1 = 1
     for (let i = top; i <= bottom; i++) {

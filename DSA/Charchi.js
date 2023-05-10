@@ -32,7 +32,7 @@ for (let i = 0; i < n; i++) {
     console.log(bag);
 }
 
-// A happy number
+// 3. A happy number
 
 function isHappyNumber(n) {
   let obj = {};
@@ -56,8 +56,29 @@ function isHappyNumber(n) {
 
 console.log(isHappyNumber(19));
 
+// 4. Happy Number (Accepted) Suhail ne dia
 
-// A Transform in education
+input=input.split("\n")
+ let tc=+input[0];
+ let line=1;
+ for(let i=0;i<tc;i++){
+     let n=Number(input[line++])
+     let arr=[];
+     while(n!==1 && !arr.includes(n)){
+         arr.push(n)
+         let sum=0
+         while(n>0){
+             let digit=n%10;
+             sum=sum+digit*digit
+             n=Math.floor(n/10)
+         }
+         n=sum
+     }
+    //   console.log(n)
+     console.log(n===1?"Yes":"No")
+ }
+
+// 5. A Transform in education
 
 let str = "A Transformation in education";
 
@@ -69,7 +90,7 @@ for (let i = str1.length - 1; i >= 0; i--) {
 }
 console.log(bag);
 
-//Merge two arrays
+// 6. Merge two arrays
 
 // let a = [3, 5, 10];
 // let b = [7, 9, 11 , 4];
@@ -88,8 +109,9 @@ console.log(bag);
 //   return a - b;
 // });
 // console.log(arr.join(","))
+// -------------------------------------------------------------------
 
-//convert 0 to 1 in binary 2D Array
+// 7. convert 0 to 1 in binary 2D Array
 
 let matrix = [
   [0, 0, 0, 1],
@@ -110,7 +132,7 @@ for (let i = 0; i < matrix.length; i++) {
 }
 console.log(matrix);
 
-//Rahul gauravs questions
+// 8. Rahul gauravs questions
 
 function runProgram(input) {
   input = input.trim().split("\n");
@@ -142,7 +164,7 @@ function rahul(arr) {
 }
 rahul(arr);
 
-// roman numbers
+// 9. roman numbers
 
 let N = 2085;
 let obj = {
@@ -172,8 +194,8 @@ for (let key of keys) {
 console.log(bag);
 
 
+// 10. Factorial of given number
 
-// Factorial of given number
 
 let N = 5;
 
@@ -183,7 +205,7 @@ for (let i = N; i >= 0; i--) {
 }
 console.log(x);
 
-// merging two array and sorting them with two pointer
+// 11. merging two array and sorting them with two pointer
 
 const arr1 = [1, 3, 4, 6];
 const arr2 = [2, 5, 7, 8];
@@ -220,7 +242,7 @@ console.log(mergeSortedArrays(arr1, arr2));
 
 
 
-// subarray contigous 1 integer suhail ne diya h
+// 12. subarray contigous 1 integer suhail ne diya h
 
 
 
@@ -247,11 +269,7 @@ function maxProductSubarray(arr) {
 }
 
 
-
-
-
-
-// suhail ne diya h merged two sorted array
+// 13. suhail ne diya h merged two sorted array
 
 
 // const arr1 = [1, 3, 4, 6];
@@ -300,10 +318,8 @@ function maxProductSubarray(arr) {
 // SortArray();
 
 
+// 14. Palindrome linked list
 
-
-
-//Palindrome linked list
 
 const LinkedListNode = class {
     constructor(nodeData) {

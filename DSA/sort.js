@@ -1,4 +1,4 @@
-// Bubble sort default primary/outer loop run in reverse && less then 1 of length of array.
+// 1. Bubble sort default primary/outer loop run in reverse && less then 1 of length of array.
 
 let arr = [8, 5, 6, 9, 4, 1];
 
@@ -29,7 +29,7 @@ for (let i = arr.length - 1; i >= 0; i--) {
 }
 console.log(arr);
 
-//Selection Sort
+// 2. Selection Sort
 
 let A = [7, 4, 10, 8, 3, 1];
 
@@ -50,7 +50,7 @@ for (let i = 0; i < n - 1; i++) {
 console.log(A);
 
 
-//Insertion Sort
+// 3. Insertion Sort
 
 // let A = [7, 4, 10, 8, 3, 1];
 // let n = 6
