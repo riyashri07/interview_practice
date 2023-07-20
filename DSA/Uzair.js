@@ -50,7 +50,7 @@ for (let i = 0; i < n; i++) {
         j++;
     }
 }
-console.log(A);
+console.log(A.join(" "));
 
 // 4. Spiral Traversal in 2D Array ----------------------------------------------------------
 

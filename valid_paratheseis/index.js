@@ -21,3 +21,4 @@ var isValid = function (s) {
 
   return !arr.length;
 };
+
