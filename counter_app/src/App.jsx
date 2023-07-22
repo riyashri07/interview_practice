@@ -1,6 +1,7 @@
 
-import './App.css';
-import Practice from './React_hooks/usestate';
+// import './App.css';
+// import Practice from './React_hooks/usestate';
+import Co from './component/counter';
 //  import Settimeout from './component/Settimeout';
 // import Bgccolor_change from './component/bgccolor_change';
 // import Counter from './component/counter';
@@ -17,7 +18,8 @@ function App() {
       <br />
       <Todo />
       <Settimeout/> */}
-    <Practice/>
+      {/* <Practice /> */}
+      <Co/>
     </div>
   );
 }

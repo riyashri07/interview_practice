@@ -41,8 +41,100 @@
 
 
 
-function consoleNum() {
-    console.log(num);
-    var num = 10;
+// function consoleNum() {
+//     console.log(num);
+//     var num = 10;
+// }
+// consoleNum();
+
+//----------------------------------------------------------------
+
+// if (true) {
+//     let a = b = 12;
+//     console.log(a);
+//     console.log(b);
+
+// }
+// console.log(b);
+// console.log(a);
+
+//----------------------------------------------------------------
+
+
+// let arr = [1, 2, 3, 4];
+// delete arr[1];
+// console.log(arr.length);
+// console.log(arr);
+
+//----------------------------------------------------------------
+
+
+//use Strict
+// "use strict";
+// var a=b=20
+
+
+//----------------------------------------------------------------
+
+
+// function fun() {
+//     console.log(this);
+// }
+// fun();
+// new fun();
+
+//----------------------------------------------------------------
+
+
+// var a = 20;
+// var fun = () => {
+
+//     console.log(a);
+//     var a = 30;
+// }
+// fun();
+
+// var a = 20;
+//  function fun(){
+//     console.log(a);
+//     var a = 30;
+// };
+// fun();
+
+
+//----------------------------------------------------------------
+
+// function x() {
+//     const a = "riya";
+
+// function y(){
+//         console.log(a);
+//     }
+//     return y
+// }
+// const z = x();
+// z();
+
+//----------------------------------------------------------------
+
+// var sum = (a, b, c) => {
+//     return {
+//         getsumtwo: function () {
+//             return a + b;
+//         },
+//         getsumthree: function () {
+//             return a + b + c;
+
+//         }
+//     }
+// }
+
+// var output = sum(2, 4, 8);
+// console.log(output.getsumthree())
+
+var sum = (a,b) => {
+    return a+b
 }
-consoleNum();
+ console.log(sum(2, 5));
+
+
